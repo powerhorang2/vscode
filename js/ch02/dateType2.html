@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환 함수</title>
+</head>
+<body>
+    <h3>형변환 함수</h3>
+    <p>데이터타입(자료형)을 변환하는 함수</p>
+    <p>
+        1. String() : 데이터 타입을 문자타입로 변환하는 함수. <br>
+        2. Number() : 데이터 타입을 숫자타입로 변환하는 함수. <br>
+        3. Boolean() : 비논리형을 논리형으로 변환하는 함수. <br>
+        - 논리형 : true, false 둘 중의 하나 <br>
+        - true : 문자열, 0을 제외한 모든 숫자(정수, 실수 포함) <br>
+        - flase : 숫자 0 , null, undefined, NaN <br>
+        4. toString() : 숫자를 문자로 변환하는 함수. <br>
+        5. parseInt() : 문자를 정수로 변환하는 함수. <br>
+        6. parseFloat() : 문자를 실수로 변환하는 함수. <br>
+    </p>
+
+    <script>
+        var a = "10", b = 20, c;
+        c = a + b; // 문자 + 숫자 -> 문자열로 처리
+        console.log("결과 : "+c);
+        console.log("데이터 타입 : " + typeof c); // string
+
+        c = Number(a) + b;
+        console.log("결과 : "+c);
+        console.log("데이터 타입 : " + typeof c); // number
+
+        console.log("결과 : "+a);
+        console.log("데이터 타입 : " + typeof a); // string
+
+        a = Number(a);
+        console.log("결과 : "+a);
+        console.log("데이터 타입 : " + typeof a); // number
+
+        var b = 10>20;
+        console.log(b);
+        console.log(String(b));
+        
+
+        // 논리형 : true, false 둘 중의 하나
+        // true : 문자열, 0을 제외한 모든 숫자(정수, 실수 포함)
+        // flase : 숫자 0 , null, undefined, NaN
+        var h = Boolean("자바스크립트");
+        console.log("결과 : "+h);
+        console.log("데이터 타입 : " + typeof h); // ture
+
+        h = Boolean(0);
+        console.log("결과 : "+h);
+        console.log("데이터 타입 : " + typeof h); // false
+
+        h = Boolean(1);
+        console.log("결과 : "+h);
+        console.log("데이터 타입 : " + typeof h); // true
+
+        
+        h = Boolean(100);
+        console.log("결과 : "+h);
+        console.log("데이터 타입 : " + typeof h); // true
+
+        
+        g = Boolean(null);
+        console.log("결과 : "+g);
+        console.log("데이터 타입 : " + typeof g); // false
+
+        
+        f = Boolean(undefined);
+        console.log("결과 : "+f);
+        console.log("데이터 타입 : " + typeof f); // false
+
+        e = Boolean(NaN);
+        console.log("결과 : "+e);
+        console.log("데이터 타입 : " + typeof e); // false
+
+        // 빈문자
+        var i = "";
+        console.log("결과 : "+Boolean(i));
+        console.log("데이터 타입 : " + typeof i); // false
+        
+        
+        // toString()
+        var aa = 10;
+        aa = aa.toString();
+        console.log("결과 : "+aa);
+        console.log("데이터타입 : "+ typeof aa);
+
+        // parseInt()
+        var bb = "10";
+        bb = parseInt(bb);
+        console.log("결과 : "+bb);
+        console.log("데이터타입 : "+ typeof bb);
+
+        // parseFloat()
+        var cc = "3.14"
+        cc = parseFloat(cc);
+        console.log("결과 : "+cc);
+        console.log("데이터타입 : "+ typeof cc);
+    </script>
+</body>
+</html>

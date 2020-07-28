@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 객체</title>
+</head>
+<body>
+    <script>
+        var date1 = new Date();
+        
+        var year = date1.getFullYear();
+        var month = date1.getMonth();
+        var day = date1.getDate();
+
+        var hour = date1.getHours();
+        var minute = date1.getMinutes();
+        var second = date1.getSeconds();
+        var milliSecond = date1.getMilliseconds(); // 1000분의 1초
+        var week = date1.getDay();
+        var weekDay = ['일', '월', '화', '수', '목', '금', '토'];
+
+        document.write(date1 + "<br>");
+        document.write(year + "년" + (month+1) + "월" + day + "일<br>");
+        document.write(hour + "시" + minute + "분" + second + "초(" + milliSecond + ")<br>");
+        document.write(weekDay[week] + "요일<br>");
+
+        var weekStr;
+        switch(week) {
+            case 0: weekStr = "일"; break;
+            case 1: weekStr = "월"; break;
+            case 2: weekStr = "화"; break;
+            case 3: weekStr = "수"; break;
+            case 4: weekStr = "목"; break;
+            case 5: weekStr = "금"; break;
+            case 6: weekStr = "토"; break;
+        }
+        document.write(weekStr + "요일<br>");
+
+    </script>
+</body>
+</html>

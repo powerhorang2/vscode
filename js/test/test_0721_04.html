@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0721 4번</title>
+    <!--
+        1. 입력창으로부터 점수를 입력받아서 출력하는 프로그램
+        입력 : 정수 입력 = 10
+        출력 : 1에서부터 입력받은 정수까지 출력, 홀수일 때는 글자색을 빨강색, 짝수 파란색, 브라우저로 출력
+    -->
+    <style>
+        .blue { color: blue; }
+        .red { color: red; }
+    </style>
+</head>
+<body>
+    <script>
+        var score = parseInt(prompt("정수 입력","1"));
+        
+        for(var i=1;i<=score;i++){
+            if (i%2==0) {
+                document.write("<span class='blue'>"+i+"</span>");
+            } else if (i%2==1) {
+                document.write("<span class='red'>"+i+"</span>");
+            }
+            
+        }
+    </script>
+</body>
+</html>

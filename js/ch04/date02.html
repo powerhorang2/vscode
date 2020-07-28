@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 날짜를 직정 저장하는 방법
+        // 2020년 5월 31일로 날짜를 설정
+
+        // 1. 년, 월, 일을 설정해서 사용하는 방법
+        var date1 = new Date(2002, 4, 31); // 2002년 5월 31일 / 0~11, 4로 찍으면 5월 
+        var year = date1.getFullYear();
+        var month = date1.getMonth();
+        var day = date1.getDate();
+
+        var hour = date1.getHours();
+        var minute = date1.getMinutes();
+        var second = date1.getSeconds();
+
+        document.write(date1 + "<br>");
+        // 월을 사용할 때 +1로 보정해서 사용
+        document.write(year + "년 " + (month+1) + "월 " + day + "일<br>");
+        document.write(hour + "시 " + minute + "분 " + second + "초<br>");
+        // 2. 
+        var date2 = new Date(2020, 11, 31); // 2020년 12월 31일 
+        var year2 = date2.getFullYear();
+        var month2 = date2.getMonth();
+        var day2 = date2.getDate();
+
+        var hour2 = date2.getHours();
+        var minute2 = date2.getMinutes();
+        var second2 = date2.getSeconds();
+
+        document.write(date2 + "<br>");
+        // 월을 사용할 때 +1로 보정해서 사용
+        document.write(year + "년 " + (month2+1) + "월 " + day2 + "일<br>");
+        document.write(hour2 + "시 " + minute2 + "분 " + second2 + "초<br>");
+    </script>
+</body>
+</html>

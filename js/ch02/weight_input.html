@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p57 체중 관리 프로그램</title>
+    <!--
+        1. 입력창을 통해서 이름(name), 키(height), 몸무게(weight) 3개의 값을 입력받아 변수에 저장
+        2. 표준 몸무게 : (키 - 100) * 0.9 을 변수에 저장
+        3. 나의 몸무게가 표준 몸무게의 + 5 or -5의 사이에 있다면 "적정 체중입니다." 메세지를 띄운다.
+           나의 몸무게가 표준 몸무게의 범위를 벗어난다면 "적정 체중이 아닙니다." 메세지를 띄운다. 
+        4. 삼항 연산자를 사용하여 출력 (추가 : if문 사용)
+    -->
+</head>
+<body>
+    <script>
+        var name = prompt("이름");
+        var height = Number(prompt("키"));
+        var weight = Number(prompt("몸무게"));
+        
+        var average = (height - 100) * 0.9;
+        var result = (weight<=average+5) && (weight>=average-5)
+        console.log(average); 
+        result ? alert(name+"님은 "+"적정 체중입니다.") : alert(name+"님은 "+"적정 체중이 아닙니다.");
+        
+        if(result == true){
+            alert(name+"님은 "+"적정 체중입니다.");
+        }else {
+            alert(name+"님은 "+"적정 체중이 아닙니다.");
+        }
+        console.log(typeof weight);
+        console.log(typeof average);
+    </script>
+</body>
+</html>

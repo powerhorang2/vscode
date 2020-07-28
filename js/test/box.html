@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var box = document.getElementsByTagName('div')[0];
+        var w = prompt("가로");
+        var h = prompt("세로");
+        var color = prompt("색깔(red,orange,yellow,green,blue,navy,purple 중 하나)");
+        console.log(typeof w);
+        function box1(){
+            box.style.width = w+"px";
+            box.style.height = h+"px";
+            box.style.background = color;
+        }
+        box1();
+    </script>
+</body>
+</html>

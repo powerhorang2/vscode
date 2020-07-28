@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출력 함수</title>
+    <style>
+        span { color : blue; }
+    </style>
+</head>
+<body>
+    <h3>출력 함수</h3>
+    <p>
+        1.document.write() : 웹브라우저 화면에 출력하는 함수<br>
+        2.consle.log() : 괄호안의 내용을 콘솔로 출력하는 함수<br>
+    </p>
+    <script>
+        var name = prompt("당신의 이름을 입력하시오.","");
+        document.write("<h1>어서오세요.</h>");
+        document.write("<h3><span>"+name+"</span>님, 환영합니다.</h3>");
+        console.log(name+"님, 환영합니다.");
+    </script>
+</body>
+</html>

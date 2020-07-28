@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 - for문 활용</title>
+    <!--
+        1. 입력창으로부터 단을 입력받아서 해당하는 단에 구구단을 출력하는 프로그램
+        입력 : 구구단의 단 입력 : 5
+        출력 : 5단에 해당하는 구구단을 출력
+
+        2.
+        - 단 전체는 div로 구성 
+        - 단 제목은 h3
+        - display는 inline-block
+        - padding : 20px;
+        - margin : 15px;
+        - 줄간격 : 30px;
+    -->
+    <style>
+        .dan {
+            display: inline-block;
+            padding: 20px;
+            margin: 15px;
+            line-height: 30px;
+            border: 1px solid black;
+        }
+        .dan h3 {
+            text-align: center;
+        }
+        .dan p {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var dan = parseInt(prompt("구구단의 단 입력","5"));
+
+        document.write("<div class='dan'>");
+        document.write("<h3>"+dan+"단<h3>");
+        for(var z=1; z<=9; z++) {
+            document.write("<p>" + dan + " * " + z + " = " + dan*z + "</p>");
+        }
+        document.write("</div>");
+    </script>
+</body>
+</html>

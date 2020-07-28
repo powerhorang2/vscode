@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 - 스위치문</title>
+</head>
+<body>
+    
+    <script>
+        // 1.
+
+        // 2. switch - case문으로 작성
+        // 조건 : 정수면 가능, 실수는 불가능, 문자열도 가능
+        // 조건에 따라 case문을 선택함
+        // :(콜론) : 에리블(label) 의미
+        // case : ~경우에
+
+        // if문 switch~case문의 비교
+        // 1. switch문으로 만들 수 있는 것은 모두 if문으로 만들 수 있다.
+        // 2. if문으로 만들 수 있는 것은 모두 switch문으로 만들 수는 없다.
+    
+        var menu = Number(prompt("메뉴를 선택해주세요.","1"));
+        switch(menu){
+        case 1:
+            document.write("메뉴 열기");
+            break;
+        case 2:
+            document.write("메뉴 읽기");
+            break;
+        case 2:
+            document.write("메뉴 읽기");
+            break;
+        case 2:
+            document.write("메뉴 읽기");
+            break;
+        default: document.write("잘 못 입력하셨습니다.<br>다시 입력해주세요.")
+            break;
+    }
+    </script>
+    
+</body>
+</html>

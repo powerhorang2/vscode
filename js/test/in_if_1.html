@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문 연습</title>
+</head>
+<body>
+    <script>
+        // DB에 저장된 아이디와 패스워드라고 가정
+        var id = "easy1004";
+        var pw = "112233"
+
+        var user_id = prompt("아이디를 입력하세요.",""); // 빈문자열 : false
+        var user_pw = prompt("비밀번호를 입력하세요.","");
+
+        if(user_id == id) {
+            if(user_pw == pw) {
+                document.write(user_id+"님, 환영합니다.");
+            } else {
+                alert("비밀번호가 일치하지 않습니다.");
+                location.reload();
+            }
+        } else {
+            alert("아이디가 일치하지 않습니다.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

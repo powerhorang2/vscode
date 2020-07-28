@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문</title>
+    <!--
+        1. 12개의 탄생석 이미지를 4행3열의 테이블에 출력하시오.
+        이미지 밑에 월/탄생석/상징을 나타내는 문자열을 출력하시오.
+
+        2. table을 사용하지않고, div로 묶어 출력하시오.
+    -->
+    <style>
+        .container { width: 1000px; margin: 30px auto; }
+        .container h2 { text-align: center; }
+        table { border: 1px solid black; border-collapse: collapse; }
+        th { border: 1px solid black; width: 200px; padding: 20.5px; }
+        .stone { float: left; width: 200px; border: 1px solid black; border-collapse: collapse; margin: 0 auto; text-align: center; height: 200px; padding: 20px; margin: 3px; }
+        .stones { width: 100%; }
+        .stones p { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>월별 탄생석과 상징</h2>
+        <script>
+            document.write("<table>");
+            var num = 1;
+            var arr = ['1월/가넷<br>/사랑,진실','2월/자수정<br>/평화,성실','3월/아쿠아마린<br>/총명,용감','4월/다이아몬드<br>/영원한사랑','5월/에메랄드<br>/행복,행운','6월/진주<br>/건강,부귀','7월/루비<br>/영원한생명,열정,용기','8월/감람석<br>/지혜,부부의행복','9월/사파이어<br>/지혜,불변','10월/오팔<br>/희망,순결','11월/토파즈<br>/우정,인내','12월/터키석<br>/성공,승리'];
+            for(var i=1; i<=3; i++) {
+                document.write("<tr>");
+                for(var z=1; z<=4; z++) {
+                    document.write("<th><img src='images_month_stone/stone0"+(num)+".png' alt=''><p>"+arr[num-1]+"</p></th>");
+                    num++;
+                }
+                document.write("</tr>");
+            }
+
+            document.write("</table>");
+        </script>
+        <br>
+        <script>
+            var num = 1;
+            var arr = ['1월/가넷<br>/사랑,진실','2월/자수정<br>/평화,성실','3월/아쿠아마린<br>/총명,용감','4월/다이아몬드<br>/영원한사랑','5월/에메랄드<br>/행복,행운','6월/진주<br>/건강,부귀','7월/루비<br>/영원한생명,열정,용기','8월/감람석<br>/지혜,부부의행복','9월/사파이어<br>/지혜,불변','10월/오팔<br>/희망,순결','11월/토파즈<br>/우정,인내','12월/터키석<br>/성공,승리'];
+            for(var i=1; i<=3; i++){
+                document.write("<div class='stones'>");
+                for(var z=1; z<=4; z++) {
+                    document.write("<div class='stone'><img src='images_month_stone/stone0"+(num)+".png' alt=''><p>"+arr[num-1]+"</p></div>");
+                    num++;
+                }  
+                document.write("</div>");
+            }
+            
+        </script>
+    </div>
+    
+</body>
+</html>

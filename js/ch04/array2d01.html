@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차원 배열</title>
+    <!--
+        1. 각 행별로(반별로) 총점과 평균을 구하여 출력하시오.
+    -->
+</head>
+<body>
+    <script>
+        // 1. 2차원 배열을 만드는 1번 방법
+
+        // var score = [
+        //     [95, 88, 76, 64, 73],       // 1반
+        //     [78, 63, 57, 92],           // 2반
+        //     [77, 82, 67, 63, 81, 82],   // 3반
+        // ];
+
+        // 2. 2차원 배열을 만드는 2번 방법 - Array 객체
+        
+        var score = new Array(
+            new Array(95, 88, 76, 64, 73),
+            new Array(78, 63, 57, 92),
+            new Array(77, 82, 67, 63, 81, 82),
+        );
+
+
+        // 확인
+        document.write(score);
+        document.write("<br>");
+        document.write("score의 행의 갯수 : " + score.length + "<br>");
+        
+        document.write("score 0번 인덱스 행의 열의 갯수 : " + score[0].length + "<br>");
+        document.write("score 1번 인덱스 행의 열의 갯수 : " + score[1].length + "<br>");
+        document.write("score 2번 인덱스 행의 열의 갯수 : " + score[2].length + "<br>");
+
+        document.write("score 0번 인덱스 행의 열 : " + score[0] + "<br>");
+        document.write("score 1번 인덱스 행의 열 : " + score[1] + "<br>");
+        document.write("score 2번 인덱스 행의 열 : " + score[2] + "<br>");
+
+        // var tot1 = 0;
+        // var tot2 = 0;
+        // var tot3 = 0;
+
+        // var ave1 = 0;
+        // var ave2 = 0;
+        // var ave3 = 0;
+        var tot = 0, ave = 0;
+
+        for(var i=0; i<score.length; i++) {
+            for(var z=0; z<score[i].length; z++) {
+                tot += score[i][z];
+            }
+            var cls = i + 1;
+            document.write("<br>" + cls + "반의 총점 : " + tot);
+            ave = tot / score[i].length;
+            document.write("<br>" + cls + "반의 평균 : " + ave.toFixed(1));
+            tot = 0, ave = 0;
+        }
+
+        // for(var i=0; i<score[0].length; i++) {
+        //     tot1 += score[0][i];
+        // }
+        // for(var i=0; i<score[1].length; i++) {
+        //     tot2 += score[1][i];
+        // }
+        // for(var i=0; i<score[2].length; i++) {
+        //     tot3 += score[2][i];
+        // }
+        // ave1 = tot1 / score[0].length;
+        // ave2 = tot2 / score[1].length;
+        // ave3 = tot3 / score[2].length;
+
+        // document.write("<br>1반의 총점 : " + tot1);
+        // document.write("<br>1반의 평균 : " + ave1);
+
+        // document.write("<br>2반의 총점 : " + tot2);
+        // document.write("<br>2반의 평균 : " + ave2);
+        
+        // document.write("<br>3반의 총점 : " + tot3);
+        // document.write("<br>3반의 평균 : " + ave3);
+        document.write("<br>---------------------------------")
+        var cls = 0;
+        for(var i in score) {
+            for(var z in score[i]) { // 2차원 배열 안에 있는 것을 1차원 배열이라고 생각해서 주고있다.
+                tot += score[i][z];
+            }
+            cls = (Number(i) + 1);
+            ave = tot / score[i].length;
+            document.write("<br>" + cls + "반(" + score[i].length + "명)의 총점 : " + tot +", 평균 : " + ave.toFixed(1));
+            tot = 0;
+            ave = 0;
+        }
+    </script>
+</body>
+</html>

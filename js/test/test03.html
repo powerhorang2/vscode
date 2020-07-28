@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번 - </title>
+    <!--
+        1. 확인창으로부터 메세지를 전달받아 전등에 점등/소등 여부를 변수에 저장.
+        2. 그 값으로부터 전등의 점등/소등 여부를 브라우저 화면에 메세지와 함께 이미지를 출력하시오.
+    -->
+    <style>
+        h2 { text-align: center; }
+        img { width: 300px; height: 300px; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <script>
+        var light = confirm("점등하시겠습니까?");
+        if(light==true){
+            document.write("<h2>ON</h2>")
+            document.write("<img src='images/lighton.png'>");
+        }else {
+            document.write("<h2>OFF</h2>")
+            document.write("<img src='images/lightoff.png'>");
+        }
+        
+        
+    </script>
+</body>
+</html>

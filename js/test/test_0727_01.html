@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 사용 방법</title>
+    <!--
+
+    -->
+    <style>
+        .container { width: 800px; margin: 30px auto; }
+        h2, h3 { text-align: center; }
+        .content1 { width: 600px; margin-left: 110px;}
+        .content1 > img { float: left; margin-right: 40px; }
+        .content1 ul { list-style: none; padding-top: 40px; }
+        .content1 ul li { margin-bottom: 20px; }
+        .content1 li label { width: 80px; float: left; text-align: right; margin-right: 10px; }
+        .content1 li input { width: 150px; padding: 5px 10px;}
+        .content1 li button { width: 170px; height: 50px; margin-left: 40px; background-color: #ecefb4; color: black; font-weight: bold; font-size: 0.9em; }
+        .content1 li button:hover { background-color: #d9cc55; }
+        .content1 li:nth-child(3) { text-align: center;  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>코리아 백화점</h2>
+        <h3>할인 판매</h3>
+        <div class="content1">
+            <img src="images/sale.png" width="250" alt="">
+            <ul>
+                <li>
+                    <label for="price">정가</label>
+                    <input type="text" id="price">
+                </li><li>
+                    <label for="rate">할인율</label>
+                    <input type="text" id="rate">
+                </li>
+                <li>
+                    <button onclick="calcPrice();">할인가격 계산하기</button>
+                </li>
+            </ul>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        
+        function calcPrice() {
+            var originPrice = document.querySelector('#price').value;
+            var rate = document.querySelector('#rate').value;
+
+            if(originPrice == 0) {
+                alert("가격을 입력해주세요!");
+            } else if( rate == 0) {
+                alert("할인율을 입력해주세요!");
+            } else {
+                var salePrice = originPrice * (rate/100); // 할인 가격
+                var resultPrice = originPrice -salePrice;
+            }
+
+            alert("정가 : " + originPrice + "\n할인율 : " + rate + "%\n판매가 : " + resultPrice);
+        }
+    </script>
+</body>
+</html>
